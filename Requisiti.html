@@ -1,0 +1,272 @@
+<html>
+
+<head>
+<meta name=Titolo content="">
+<meta name="Parole chiave" content="">
+<meta http-equiv=Content-Type content="text/html; charset=macintosh">
+<meta name=Generator content="Microsoft Word 14 (filtered)">
+<style>
+<!--
+ /* Font Definitions */
+@font-face
+	{font-family:"Courier New";
+	panose-1:2 7 3 9 2 2 5 2 4 4;}
+@font-face
+	{font-family:Times;
+	panose-1:2 0 5 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"\FF2D\FF33 \660E\671D";}
+@font-face
+	{font-family:"\FF2D\FF33 \660E\671D";}
+ /* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:Cambria;}
+h1
+	{margin-right:0cm;
+	margin-left:0cm;
+	font-size:24.0pt;
+	font-family:"Times New Roman";}
+span.Titolo1Carattere
+	{font-family:"Times New Roman";
+	font-weight:bold;}
+.MsoChpDefault
+	{font-family:Cambria;}
+@page WordSection1
+	{size:595.0pt 842.0pt;
+	margin:17.0pt 32.6pt 14.2pt 32.6pt;}
+div.WordSection1
+	{page:WordSection1;}
+-->
+</style>
+
+</head>
+
+<body lang=IT>
+
+<div class=WordSection1>
+
+<h1 align=center style='margin-top:0cm;margin-right:0cm;margin-bottom:6.0pt;
+margin-left:0cm;text-align:center'><span style='font-size:16.0pt;color:black'>Supermercato</span></h1>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>Sviluppare un'applicazione che consenta di gestire le
+informazioni relative al funzionamento di un supermercato. Tutte le classi
+devono essere contenute nel package </span><span style='font-size:9.0pt;
+font-family:"Courier New"'>supermercato</span><span style='font-size:10.0pt;
+font-family:Times'>.</span></p>
+
+<div class=MsoNormal align=center style='margin-bottom:3.0pt;text-align:center'><span
+style='font-size:10.0pt;font-family:Times'>
+
+<hr size=2 width=1080 style='width:1080.0pt' noshade style='color:black'
+align=center>
+
+</span></div>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+Times'>R1. Corsie e catalogo prodotti trattati</span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>L'applicazione viene gestita mediante un'istanza della
+classe </span><span style='font-size:9.0pt;font-family:"Courier New"'>Supermercato</span><span
+style='font-size:10.0pt;font-family:Times'>. Il supermercato e' organizzato in
+corsie. Le corsie vengono aggiunte mediante il metodo <b>aggiungiCorsia()</b>
+della classe </span><span style='font-size:9.0pt;font-family:"Courier New"'>Supermercato</span><span
+style='font-size:10.0pt;font-family:Times'>. Il metodo riceve come parametri il
+nome della corsia (univoco) e la capienza massima (in cm^3).</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>I prodotti trattati dal supermercato sono rappresentato
+dalla classe </span><span style='font-size:9.0pt;font-family:"Courier New"'>Prodotto</span><span
+style='font-size:10.0pt;font-family:Times'>. Tra i prodotti esistono quelli da
+frigo, rappresentati dalla classe </span><span style='font-size:9.0pt;
+font-family:"Courier New"'>ProdottoDaFrigo</span><span style='font-size:10.0pt;
+font-family:Times'> (che estende </span><span style='font-size:9.0pt;
+font-family:"Courier New"'>Prodotto</span><span style='font-size:10.0pt;
+font-family:Times'>). </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>Attraverso il metodo <b>catalogaProdotto()</b> della classe </span><span
+style='font-size:9.0pt;font-family:"Courier New"'>Supermercato</span><span
+style='font-size:10.0pt;font-family:Times'> e' possibile aggiungere un nuovo
+prodotto a quelli trattati dal supermercato. Il metodo riceve come parametri il
+codice prodotto (che identifica univocamente il prodotto stesso), il nome, il
+volume (in cm^3) ed un valore boolean che indica se si tratti di un prodotto da
+frigo (</span><span style='font-size:9.0pt;font-family:"Courier New"'>true</span><span
+style='font-size:10.0pt;font-family:Times'>) oppure no (</span><span
+style='font-size:9.0pt;font-family:"Courier New"'>false</span><span
+style='font-size:10.0pt;font-family:Times'>). Il metodo restituisce un oggetto
+della classe corrispondente (</span><span style='font-size:9.0pt;font-family:
+"Courier New"'>Prodotto</span><span style='font-size:10.0pt;font-family:Times'>
+o </span><span style='font-size:9.0pt;font-family:"Courier New"'>ProdottoDaFrigo</span><span
+style='font-size:10.0pt;font-family:Times'>). Nel caso in cui il prodotto sia
+gia' a catalogo viene restituito un riferimento all'istanza corrispondente.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>La classe </span><span style='font-size:9.0pt;font-family:
+"Courier New"'>Prodotto</span><span style='font-size:10.0pt;font-family:Times'>
+dispone dei metodi getter per ottenere codice, nome e volume. Per ogni
+prodotto, mediante opportuni metodi getter e setter, è inoltre possibile ottenere/impostare
+il prezzo di listino e la percentuale di sconto (entrambi a zero, se non
+specificato diversamente). Il metodo <b>isDaFrigo()</b> restituisce invece un
+valore boolean </span><span style='font-size:9.0pt;font-family:"Courier New"'>true</span><span
+style='font-size:10.0pt;font-family:Times'> se il prodotto è da frigo, </span><span
+style='font-size:9.0pt;font-family:"Courier New"'>false</span><span
+style='font-size:10.0pt;font-family:Times'> altrimenti. Per i prodotti da frigo
+e' infine possibile ottenere/impostare la temperatura di conservazione.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>Il metodo <b>elencoProdotti()</b> della classe </span><span
+style='font-size:9.0pt;font-family:"Courier New"'>Supermercato</span><span
+style='font-size:10.0pt;font-family:Times'> restituisce l'elenco dei prodotti
+trattati dal supermercato, ordinati per valori di prezzo di listino
+decrescenti.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>E' possibile cercare un particolare prodotto tra quelli
+trattati mediante il metodo <b>cercaProdotto()</b>, che riceve come parametro
+il codice del prodotto e restituisce un riferimento all'oggetto </span><span
+style='font-size:9.0pt;font-family:"Courier New"'>Prodotto</span><span
+style='font-size:10.0pt;font-family:Times'> cercato. In caso di prodotto
+inesistente il metodo restituisce </span><span style='font-size:9.0pt;
+font-family:"Courier New"'>null</span><span style='font-size:10.0pt;font-family:
+Times'>, scatenando una eccezione di tipo </span><span style='font-size:9.0pt;
+font-family:"Courier New"'>ProdottoInesistenteException</span><span
+style='font-size:10.0pt;font-family:Times'>.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+Times'>R2. Esposizione prodotti</span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>Un prodotto viene esposto in una corsia mediante il metodo <b>esponiProdotti()</b>
+della classe </span><span style='font-size:9.0pt;font-family:"Courier New"'>Supermercato</span><span
+style='font-size:10.0pt;font-family:Times'>, che riceve come parametri il nome
+della corsia, il riferimento all'oggetto di tipo </span><span style='font-size:
+9.0pt;font-family:"Courier New"'>Prodotto</span><span style='font-size:10.0pt;
+font-family:Times'> da esporre e la relativa quantità, espressa come numero di
+pezzi (si noti che lo stesso prodotto puo' essere esposto anche in piu' di una
+corsia). Il metodo determina la quantità di prodotto (eventualmente inferiore a
+quella specificata) che e' effettivamente possibile esporre in base allo spazio
+ancora disponibile nella corsia indicata. </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>Mediante il metodo <b>calcolaPercentualeDiOccupazione()</b> di
+</span><span style='font-size:9.0pt;font-family:"Courier New"'>Supermercato</span><span
+style='font-size:10.0pt;font-family:Times'> è possibile ottenere la percentuale
+di occupazione attuale della corsia il cui nome e' passato come parametro.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>Il metodo <b>elencoCodiciProdottoPerCorsia()</b> della stessa
+classe riceve come parametro il nome di una corsia e restituisce un elenco
+alfabetico dei codici relativi ai prodotti esposti in quella corsia.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>E' possibile utilizzare il metodo <b>quantitaProdottoEsposto()</b>
+della classe </span><span style='font-size:9.0pt;font-family:"Courier New"'>Supermercato</span><span
+style='font-size:10.0pt;font-family:Times'> per ottenere la quantita' esposta
+per un particolare prodotto. Esistono due varianti del metodo. La prima
+variante riceve come parametri il codice del prodotto ed il nome di una corsia
+e restituisce la quantità di prodotto esposto in quella corsia. La seconda
+variante riceve invece solamente il codice del prodotto e restituisce come
+quantita' esposta per quel prodotto la somma delle quantita' esposte nelle
+diverse corsie.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+Times'>R3. Acquisti e scontrini</span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>I prodotti si considerano acquistati nel momento in cui vengono
+aggiunti ad uno scontrino. Gli scontrini, rappresentati dalla classe </span><span
+style='font-size:9.0pt;font-family:"Courier New"'>Scontrino</span><span
+style='font-size:10.0pt;font-family:Times'>, sono identificati da un codice
+progressivo assegnato all'apertura dello scontrino stesso (a partire da 1000). </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>Per aprire uno scontrino si usa il metodo <b>apriScontrino()</b>
+di </span><span style='font-size:9.0pt;font-family:"Courier New"'>Supermercato</span><span
+style='font-size:10.0pt;font-family:Times'>, che restituisce il codice dello
+scontrino creato.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>I prodotti vengono aggiunti ad uno scontrino invocando il
+metodo <b>acquistaProdotto()</b> della stessa classe, che riceve come parametri
+il codice dello scontrino, il riferimento all'oggetto di tipo </span><span
+style='font-size:9.0pt;font-family:"Courier New"'>Prodotto</span><span
+style='font-size:10.0pt;font-family:Times'> da aggiungere, la corsia da cui
+prelevarlo e la quantita' (potra' essere prelevata dalla corsia una quantita' al
+piu' pari a quella disponibile). In caso di corsia inesistente il metodo
+scatenera' una eccezione di tipo </span><span style='font-size:9.0pt;
+font-family:"Courier New"'>CorsiaInesistenteException</span><span
+style='font-size:10.0pt;font-family:Times'>.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>Mediante il metodo <b>dettagliScontrino()</b> e' possibile
+ottenere, per un determinato scontrino, le informazioni relative ai prodotti
+acquistati ed alle relative quantità. Il metodo riceve come parametro il codice
+dello scontrino e restituisce una stringa che riporta, nella prima riga, il
+codice dello scontrino e, nelle righe successive il codice del prodotto e la
+relativa quantita' separati da uno spazio. Tutte le righe tranne l'ultima sono
+terminate da </span><span style='font-size:9.0pt;font-family:"Courier New"'>\n</span><span
+style='font-size:10.0pt;font-family:Times'>.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>Il metodo <b>chiudiScontrino()</b> riceve come parametro il
+codice dello scontrino da chiudere e restituisce l'importo totale da pagare,
+calcolato in base alle diverse quantita' di prodotto acquistate ed applicando
+eventuali sconti ai prezzi di listino.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>&nbsp;</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><b><span style='font-family:
+Times'>R4. Caricamento da file</span></b></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>Il metodo <b>leggiFile()</b> della classe </span><span
+style='font-size:9.0pt;font-family:"Courier New"'>Supermercato</span><span
+style='font-size:10.0pt;font-family:Times'> permette di leggere da file le
+informazioni relative ai prodotti trattati ed alla relativa esposizione nelle
+corsie. </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>Il metodo riceve come parametro il percorso di un file
+testuale organizzato per righe, dove ogni riga puo' riportare le informazioni
+relative ad un prodotto (da frigo o non) o all'esposizione. Si assuma che le
+informazioni siano separate da un punto e virgola. </span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>Le righe relative ad un prodotto non da frigo cominciano con
+la stringa </span><span style='font-size:9.0pt;font-family:"Courier New"'>PRODOTTO_NO_FRIGO</span><span
+style='font-size:10.0pt;font-family:Times'>, seguita da codice, nome, volume,
+prezzo e percentuale di sconto del prodotto. Le righe relative ad un prodotto
+da frigo cominciano invece con </span><span style='font-size:9.0pt;font-family:
+"Courier New"'>PRODOTTO_DA_FRIGO</span><span style='font-size:10.0pt;
+font-family:Times'> e, dopo le informazioni sopra indicate, riportano anche la
+temperatura di conservazione.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>Infine, le righe relative all'esposizione di un prodotto
+cominciano con la stringa </span><span style='font-size:9.0pt;font-family:"Courier New"'>ESPOSIZI_PRODOTTO</span><span
+style='font-size:10.0pt;font-family:Times'>, seguita da codice prodotto, nome
+corsia e quantita' da esporre.</span></p>
+
+<p class=MsoNormal style='text-autospace:none'><span style='font-size:10.0pt;
+font-family:Times'>Si assuma che il file non contenga errori di formato e che
+quindi tutte le righe siano strutturate come sopra riportato. Si assuma
+tuttavia che nel file si possa fare riferimento a prodotti non (ancora) trattati
+e/o a corsie non (ancora) definite. </span></p>
+
+</div>
+
+</body>
+
+</html>
